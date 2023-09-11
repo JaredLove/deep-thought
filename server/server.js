@@ -31,11 +31,10 @@ server.applyMiddleware({ app });
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
-
 // wildcard GET route for the server
 // This wildcard route will respond with the front-end React app in development mode,
 // or the production-ready React app in production mode.
-app.get('*', (req, res) => {
+app.get('*', (req, res) => {  
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 

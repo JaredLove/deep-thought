@@ -54,5 +54,7 @@ class AuthService {
       window.location.assign('/');
     }
   }
+
+  export default new AuthService();
     
-  export default new AuthService();   // instantiate the class
+  // instantiate the class
