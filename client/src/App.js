@@ -30,7 +30,7 @@ import Signup from './pages/Signup';
 
 // URI stands for "Uniform Resource Identifier." It's a string that identifies a resource. In this case, it identifies the location of our GraphQL server endpoint.
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 // With the configuration of authLink, we use the setContext() function to 

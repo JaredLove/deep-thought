@@ -6,6 +6,7 @@ import FriendList from '../components/FriendList';
 import { ADD_FRIEND, REMOVE_FRIEND} from '../utils/mutations';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_USER, QUERY_ME, IS_FRIEND } from '../utils/queries';
+
 import ThoughtForm from '../components/ThoughtForm';
 const Profile = () => {
 
