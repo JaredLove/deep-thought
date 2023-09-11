@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
-import {REMOVE_THOUGHT, REMOVE_REACTION} from '../utils/mutations';
+import {REMOVE_THOUGHT} from '../utils/mutations';
 import { QUERY_THOUGHT } from '../utils/queries';
 import ReactionList from '../components/ReactionList';
 import ReactionForm from '../components/ReactionForm';
@@ -9,7 +9,6 @@ import Auth from '../utils/auth';
 const SingleThought = props => {
   const { id: thoughtId } = useParams();
   const [removeThought] = useMutation(REMOVE_THOUGHT);
-  const [removeReaction] = useMutation(REMOVE_REACTION);
   console.log(thoughtId);
   const { loading, data } = useQuery(QUERY_THOUGHT, {
     variables: { id: thoughtId }

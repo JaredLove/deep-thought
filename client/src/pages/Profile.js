@@ -13,10 +13,10 @@ const Profile = () => {
   const [removeFriend] = useMutation(REMOVE_FRIEND);
   const { username: userParam } = useParams();
 
-  const { loading, data, error } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+  const { loading, data} = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam }
   });
-  const { loading: checking, data: isFriendData, error: error1 } = useQuery(IS_FRIEND, {
+  const { loading: checking, data: isFriendData,} = useQuery(IS_FRIEND, {
     variables: { username: userParam }
   });
 
